@@ -12,7 +12,19 @@ import java.util.Date;
  * @author mcfeng
  * @version 1.0 创建时间2021-2-5
  * */
-public class DateUtils {
+package com.ruoyi.shop.utils;
+
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAdjusters;
+import java.time.temporal.TemporalUnit;
+import java.util.Date;
+
+public class MyDateUtils {
     /**
      *  DATE_PATTERN 格式化字符串类型{"yyyy-MM-dd"}
      */
@@ -46,6 +58,22 @@ public class DateUtils {
         return Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
     }
     /**
+     *  Date => LocalDateTime
+     * @param date Date
+     * @return LocalDateTime
+     */
+    public static LocalDateTime convertLocalDateTime(Date date) {
+      return date.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
+    }
+    /**
+     *  Date => LocalDate
+     * @param date Date
+     * @return LocalDate
+     */
+    public static LocalDate convertLocalDate(Date date) {
+        return date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+    }
+    /**
      *  LocalDate 增加天数或者减少天数
      * @param numbers LocalDateTime
      * @param localDate LocalDate
@@ -71,6 +99,7 @@ public class DateUtils {
             return localDateTime.minus(Math.abs(numbers), ChronoUnit.DAYS);
         }
     }
+
     /**
      *  LocalDateTime 增加天数或者减少天数
      * @param numbers LocalDateTime
