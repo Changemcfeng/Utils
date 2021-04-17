@@ -7,3 +7,10 @@
  - 时间比较（data，LocalDate，LocalDateTime）<br>
  -  判断当前时间是否在时间段里（data，LocalDate，LocalDateTime）<br>
 
+#### DateUtils 数组交集工具类：
+*功能*：
+ - 求数组交集（interSection）
+ - 求数组并集（unionSection）
+ - 求数组差集（differenceSet）
+ - 数组转化成set（arrayIntoSet）
+ - set转化成数组（setIntoArray）
