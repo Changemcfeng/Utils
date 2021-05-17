@@ -14,3 +14,8 @@
  - 求数组差集（differenceSet）
  - 数组转化成set（arrayIntoSet）
  - set转化成数组（setIntoArray）
+
+#### SnowflakeIdWorker 雪花算法：
+*功能*：
+ - 产生一个不重复的id，整体上按照时间自增排序，
+ - 整个分布式系统内不会产生ID碰撞(由数据中心ID和机器ID作区分)，并且效率较高，经测试，SnowFlake每秒能够产生26万ID左右
