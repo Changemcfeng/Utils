@@ -2,7 +2,6 @@ public class Test {
     public static void main(String[] args) throws UnsupportedEncodingException {
         String base32Chars = "5CDEFGHIJKLMNOPQRSTUVWXYZ234567";
         System.out.println(binaryOut(base32Chars));
-
     }
     /**
      * 如果位数超过8位，则过滤掉
